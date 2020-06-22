@@ -15,7 +15,7 @@ add_theme_support( 'yoast-seo-breadcrumbs' );
 function wpex_ybtt_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'wpex_ybtt_trim_title', array(
 		'type' => 'theme_mod',
-		'sanitize_callback' => false,
+		'sanitize_callback' => 'absint',
 	) );
 	$wp_customize->add_control( 'wpex_ybtt_trim_title', array(
 		'label'       => __( 'Trim Title Length', 'wpex' ),
